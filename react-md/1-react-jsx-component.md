@@ -22,7 +22,7 @@
 ---
 
 #### Chrome React eklentisi
-* Google Chrome için "React Dev Tools" eklentisini kuralım
+* Google Chrome için "React Dev Tools" eklentisi
 
 ---
 
