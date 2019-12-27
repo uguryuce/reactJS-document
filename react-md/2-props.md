@@ -1,7 +1,7 @@
 # Props
 
 #### Props Kullanımı
-
+<br>
 > App.js 
 
 ```js
@@ -38,7 +38,7 @@ salary  =  "6000"
 }
 export  default  App;
 ```
-
+<br>
 > User.js
 
 ```js
@@ -88,6 +88,9 @@ return (
 export default User;
 */
 ```
+<br>
+
+> Navbar.js
 
 ```js
 import  React  from  "react";
@@ -106,6 +109,8 @@ export  default  Navbar;
 ```
 
 ---
+<br>
+<br>
 
 #### Proptypes ve Default Props
 
@@ -147,7 +152,7 @@ export default App;
 
 
 ```
-
+<br>
 > User.js
 
 ```js
@@ -196,7 +201,7 @@ export default User;
 
 
 ```
-
+<br>
 > Navbar.js
 
 ```js
@@ -222,7 +227,8 @@ export default Navbar;
 
 
 ---
-
+<br>
+<br>
 #### User Arayüzü
 
 > App.js
@@ -261,7 +267,7 @@ class App extends Component {
 export default App;
 
 ```
-
+<br>
 > User.js
 
 ```js
@@ -316,7 +322,7 @@ export default User;
 
 
 ```
-
+<br>
 > Navbar.js
 
 ```js
