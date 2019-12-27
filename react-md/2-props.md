@@ -2,6 +2,7 @@
 
 #### Props Kullanımı
 <br>
+
 > App.js 
 
 ```js
@@ -39,6 +40,7 @@ salary  =  "6000"
 export  default  App;
 ```
 <br>
+
 > User.js
 
 ```js
@@ -92,7 +94,6 @@ export default User;
 
 > Navbar.js
 
-> Navbar.js
 
 ```js
 import  React  from  "react";
@@ -155,6 +156,7 @@ export default App;
 
 ```
 <br>
+
 > User.js
 
 ```js
@@ -204,6 +206,7 @@ export default User;
 
 ```
 <br>
+
 > Navbar.js
 
 ```js
@@ -270,6 +273,7 @@ export default App;
 
 ```
 <br>
+
 > User.js
 
 ```js
@@ -325,6 +329,7 @@ export default User;
 
 ```
 <br>
+
 > Navbar.js
 
 ```js
@@ -355,49 +360,5 @@ export default Navbar;
     <script src="https://kit.fontawesome.com/b753f1f7f5.js" crossorigin="anonymous"></script>    <!-- BOOTSTRAP -->
     
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
