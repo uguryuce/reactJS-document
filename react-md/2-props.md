@@ -234,6 +234,7 @@ export default Navbar;
 ---
 <br>
 <br>
+
 #### User Arayüzü
 
 > App.js
