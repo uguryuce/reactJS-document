@@ -1,27 +1,41 @@
 import React, { Component } from 'react';
 import Navbar from "./components/Navbar";
 import User from "./components/User";
+import Users from "./components/Users";
 import './App.css';
 
 
 class App extends Component {
+
+  state = {
+    users : [
+      {
+        id : 1,
+        name : "Uğur Yüce",
+        salary : "5000",
+        department : "Bilişim"
+      },
+      {
+        id : 2,
+        name : "İlteriş Keskin",
+        salary : "4000",
+        department : "Yazılım"
+      },
+      {
+        id : 3,
+        name : "Ugi",
+        salary : "7000",
+        department : "Üretim"
+      }
+    ]
+  }
     render() {
       
       return (
         <div className="container">
           <Navbar title = "User App 2" />
           <hr/>
-          <User
-          name = "Uğur Yüce"
-          department = "Bilişim"
-          salary = "5000"
-          />
-
-          <User
-          name = "Selamet Şamlı"
-          department = "Bilişim"
-          />
-          
+          <Users users = {this.state.users} />
           
         </div>
       );
