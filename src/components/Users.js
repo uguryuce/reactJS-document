@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import User from "./User";
+import PropTypes from 'prop-types'
+
 
 class Users extends Component {
     render() {
-        const {users} = this.props;
+        const {users , deleteUser} = this.props;
         console.log(users);
         return (
             <div>
@@ -13,9 +15,11 @@ class Users extends Component {
                             <User
 
                                 key = {user.id}
+                                id = {user.id}
                                 name = {user.name}
                                 salary = {user.salary}
                                 department = {user.department}
+                                deleteUser = {deleteUser}
                             />
                         )
                     })
@@ -23,5 +27,10 @@ class Users extends Component {
             </div>
         )
     }
+}
+Users.propTypes = {
+    users : PropTypes.array.isRequired,
+    deleteUser : PropTypes.func.isRequired
+    
 }
 export default Users;

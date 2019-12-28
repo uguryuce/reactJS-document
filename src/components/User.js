@@ -45,6 +45,12 @@ class User extends Component {
         console.log(number);
     }
 
+    onDeleteUser = (e) => {
+        const {id , deleteUser} = this.props;
+        deleteUser(id);
+
+    }
+
     constructor (props){
         super(props);
 
@@ -66,7 +72,7 @@ class User extends Component {
                 <div className ="card-body">
                     <div className = "card-header d-flex justify-content-between">
                         <h4 className = "d-inline " onClick = {this.onClickEvet}>{this.props.name}</h4>
-                        <i className = "fa fa-trash-alt" style = {{cursor:"pointer"}}  onClick = {this.onClickEvet2.bind(this,200)}></i>
+                        <i className = "fa fa-trash-alt" style = {{cursor:"pointer"}}  onClick = {this.onDeleteUser}></i>
                     </div>
 
                     {
@@ -95,6 +101,7 @@ User.propTypes = {
     name : PropTypes.string.isRequired,
     salary : PropTypes.string.isRequired,
     department : PropTypes.string.isRequired,
+    deleteUser : PropTypes.func.isRequired
 
 }
 export default User;
