@@ -1,7 +1,7 @@
 # State Nedir ve Statelerin Özellikleri
 
 #### State Oluşturma
-
+<br>
 > App.js
 
 ```js
