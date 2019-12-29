@@ -2,6 +2,7 @@
 
 #### State Oluşturma
 <br>
+
 > App.js
 
 ```js
@@ -38,6 +39,7 @@ class App extends Component {
 export default App;
 
 ```
+<br>
 
 > Navbar.js
 
@@ -61,6 +63,7 @@ Navbar.defaultProps = {
 }
 export default Navbar;
 ```
+<br>
 
 > User.js
 
@@ -128,6 +131,7 @@ export default User;
 ---
 
 #### React Eventler
+<br>
 
 > App.js
 
@@ -165,6 +169,7 @@ class App extends Component {
 export default App;
 
 ```
+<br>
 
 > Navbar.js
 
@@ -188,6 +193,7 @@ Navbar.defaultProps = {
 }
 export default Navbar;
 ```
+<br>
 
 > User.js
 
@@ -290,6 +296,7 @@ export default User;
 ---
 
 #### Eventler ve State Değiştirme
+<br>
 
 > User.js +
 
@@ -304,6 +311,7 @@ onClickEvet = (e) =>{
 ---
 
 #### Componentler Arası İletişim
+<br>
 
 > App.js
 
@@ -355,6 +363,7 @@ class App extends Component {
 export default App;
 
 ```
+<br>
 
 > Users.js
 
@@ -388,6 +397,7 @@ class Users extends Component {
 export default Users;
 
 ```
+<br>
 
 > User.js
 
@@ -493,8 +503,9 @@ User.propTypes = {
 }
 export default User;
 ```
+<br>
 
->Navbar.js
+> Navbar.js
 
 ```js
 import React from "react";
@@ -520,6 +531,7 @@ export default Navbar;
 ---
 
 #### Kullanıcı Silme ve Componentlar Arası State İletişimi (Props Drillins)
+<br>
 
 > App.js
 
@@ -578,6 +590,7 @@ class App extends Component {
 export default App;
 
 ```
+<br>
 
 > Users.js
 
@@ -620,6 +633,7 @@ Users.propTypes = {
 export default Users;
 
 ```
+<br>
 
 > User.js
 
@@ -732,6 +746,7 @@ User.propTypes = {
 }
 export default User;
 ```
+<br>
 
 > Navbar.js
 
@@ -755,37 +770,5 @@ Navbar.defaultProps = {
 }
 export default Navbar;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
