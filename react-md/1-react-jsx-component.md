@@ -1,3 +1,13 @@
+# Giriş Seviyesi Ön Bilgiler
+
+* ```JSX```, JavaScript için bir syntax uzantısıdır. JSX, React elementleri üretir. Mesela aşağıdaki tanım bir string ya da HTML değildir. Kısacası React yazarken kullanacağınız syntaxtır.
+
+* ```React Component (React Bileşeni)``` Componentler, uygulamanızı tekrar kullanılabilir parçalara ayırmanıza ve her bir parçayı ayrı ayrı düşünmenize izin verir. Bu bir buton, bir form, bir diyalog, bir ekran vb. gibi olabilir. 2 tür component vardır. Bunlar fonksiyon component ve class componenttır. Class Component kullanmak daha mantıklıdır.  Çünkü daha çok avantaj sağlar.
+
+* ```Props``` JSX attributelerini tek bir obje olarak bir componente aktarılmasını sağlayan objeye props denilmektedir. Mesela o componente isim ve soyisim değişkenlerini parametre olarak aktarırsak bu parametreleri componentin içinde props.isim , props.soyisim şeklinde erişebiliriz
+
+* ```State``` State yalnızca classlar için kullanılabilen bir özelliktir. State bu classın global değişkeni olarak düşünülebilir..
+
 # React - JSX - Component
 
 
