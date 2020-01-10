@@ -1,3 +1,4 @@
+
 # Giriş Seviyesi Ön Bilgiler
 
 * ```JSX```, JavaScript için bir syntax uzantısıdır. JSX, React elementleri üretir. Mesela aşağıdaki tanım bir string ya da HTML değildir. Kısacası React yazarken kullanacağınız syntaxtır.
