@@ -14,13 +14,13 @@ export class UserProvider extends Component {
           },
           {
             id : 2,
-            name : "İlteriş Keskin",
+            name : "İlto",
             salary : "4000",
             department : "Yazılım"
           },
           {
             id : 3,
-            name : "Ugi",
+            name : "Selo",
             salary : "7000",
             department : "Üretim"
           }
