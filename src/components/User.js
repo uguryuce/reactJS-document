@@ -1,32 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import UserConsumer from "../context";
 
 
 class User extends Component {
-    //bind etmek için ilk yöntem: fonksiyon tanımlanır sonra bind edilir 
-    //örnekte kullandığımız yöntem de bu
-    /*
-    onClickEvet(e){
-        console.log(this);
-    }
-
-    constructor (props){
-        super(props);
-        this.onClickEvet = this.onClickEvet.bind(this);
-    }
-    */
-
-    //--------------------------------------------------------
-
-
-
-    //bind için diğer yöntem - arrow function şeklinde yazılır bind etmeye gerek kalmaz
-    /* 
-    onClickEvet = (e) =>{
-        console.log(this);
-    }
-    */
-
+    
    onClickEvet = (e) =>{
     this.setState({
         isVisible :!this.state.isVisible
@@ -45,9 +23,11 @@ class User extends Component {
         console.log(number);
     }
 
-    onDeleteUser = (e) => {
-        // const {id} = this.props;
+    onDeleteUser = (dispatch ,e) => {
+        const {id} = this.props;
         //Consumer Dispatch
+
+        dispatch({type : "DELETE_USER", payload:id});
 
     }
 
@@ -67,27 +47,43 @@ class User extends Component {
 
         const {name,department,salary} = this.props;
         const {isVisible} = this.state;
+
         return (
-            <div className = "col-md-8 mb-4">
-                <div className ="card-body">
-                    <div className = "card-header d-flex justify-content-between">
-                        <h4 className = "d-inline " onClick = {this.onClickEvet}>{this.props.name}</h4>
-                        <i className = "fa fa-trash-alt" style = {{cursor:"pointer"}}  onClick = {this.onDeleteUser}></i>
-                    </div>
+        <UserConsumer>
+            {
+                value => {
+                    const {dispatch} = value;
 
-                    {
-                        isVisible ? 
+                    return (
+                        <div className = "col-md-8 mb-4">
+                            <div className ="card-body">
+                                <div className = "card-header d-flex justify-content-between">
+                                    <h4 className = "d-inline " onClick = {this.onClickEvet}>{this.props.name}</h4>
+                                    <i className = "fa fa-trash-alt" style = {{cursor:"pointer"}}  onClick = {this.onDeleteUser.bind(this, dispatch)}></i>
+                                </div>
+            
+                                {
+                                    isVisible ? 
+            
+                                <div className = "card-body">
+                                    <p className = "card-text">Maaş : {salary}</p> 
+                                    <p className = "card-text">Department : {department}</p> 
+                                    
+                                </div> : null
+            
+                                }
+                            </div>
+                        </div>
+                    )
+                }
+            }
 
-                    <div className = "card-body">
-                        <p className = "card-text">Maaş : {salary}</p> 
-                        <p className = "card-text">Department : {department}</p> 
-                        
-                    </div> : null
-
-                    }
-                </div>
-            </div>
+        </UserConsumer>
         )
+        /*
+        
+
+        */
     }
 }
 
