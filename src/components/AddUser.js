@@ -20,18 +20,50 @@ const Animation = posed.div({
 class AddUser extends Component {
 
     state = {
-        visible : false
+        visible : false,
+        name : "",
+        department : "",
+        salary : ""
     }
 
     changeVisiblity = (e) => {
         this.setState({
             visible : !this.state.visible
-        });
+        })
     }
+
+    changeInput = (e) => {
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+    /*
+
+    changeName = (e) => {
+        this.setState({
+            name : e.target.value
+        })
+
+    }
+
+    changeDepartment = (e) => {
+        this.setState({
+            department : e.target.value
+        })
+    }
+
+    changeSalary = (e) => {
+        this.setState({
+            salary : e.target.value
+        })
+    }
+
+    */
 
     render() {
 
-        const {visible} = this.state;
+        const {visible, name, salary, department} = this.state;
         return (
             <div className = "col-md-8 mb-4">
 
@@ -54,7 +86,8 @@ class AddUser extends Component {
                                 id = "id"
                                 placeholder = "Enter name"
                                 className = "form-control"
-                                
+                                value = {name}
+                                onChange = {this.changeInput}
                                 />
                             </div>
 
@@ -66,6 +99,8 @@ class AddUser extends Component {
                                 id = "department"
                                 placeholder = "Enter department"
                                 className = "form-control"
+                                value = {department}
+                                onChange = {this.changeInput}
                                 
                                 />
                             </div>
@@ -78,6 +113,8 @@ class AddUser extends Component {
                                 id = "id"
                                 placeholder = "Enter salary"
                                 className = "form-control"
+                                value = {salary}
+                                onChange = {this.changeInput}
                                 
                                 />
                             </div>
