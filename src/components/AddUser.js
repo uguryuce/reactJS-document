@@ -1,9 +1,43 @@
 import React, { Component } from 'react'
+import posed from 'react-pose';
+
+
+const Animation = posed.div({
+    visible : {
+        opacity : 1,
+        applyAtStart : {
+            display : "block"
+        }
+    },
+    hidden : {
+        opacity : 0,
+        applyAtEnd : {
+            display : "none"
+        }
+    }
+});
 
 class AddUser extends Component {
+
+    state = {
+        visible : false
+    }
+
+    changeVisiblity = (e) => {
+        this.setState({
+            visible : !this.state.visible
+        });
+    }
+
     render() {
+
+        const {visible} = this.state;
         return (
             <div className = "col-md-8 mb-4">
+
+                <button onClick = {this.changeVisiblity} className = "btn btn-dark btn-block bm-1">{visible ? "Hide Form" : "Show Form"}</button>
+
+                <Animation pose = {visible ? "visible" : "hidden"}>
 
                 <div className = "card">
                     <div className = "card-header">
@@ -19,7 +53,7 @@ class AddUser extends Component {
                                 name = "name"
                                 id = "id"
                                 placeholder = "Enter name"
-                                class = "form-control"
+                                className = "form-control"
                                 
                                 />
                             </div>
@@ -31,7 +65,7 @@ class AddUser extends Component {
                                 name = "department"
                                 id = "department"
                                 placeholder = "Enter department"
-                                class = "form-control"
+                                className = "form-control"
                                 
                                 />
                             </div>
@@ -43,16 +77,16 @@ class AddUser extends Component {
                                 name = "salary"
                                 id = "id"
                                 placeholder = "Enter salary"
-                                class = "form-control"
+                                className = "form-control"
                                 
                                 />
                             </div>
 
-                            <button class = "btn btn-danger btn-block mt-3" type = "submit">Add</button>
+                            <button className = "btn btn-danger btn-block mt-3" type = "submit">Add</button>
                         </form>
                     </div>
                 </div>
-                
+                </Animation>
             </div>
         )
     }
