@@ -287,5 +287,28 @@ User.propTypes = {
 export default User;
 ```
 
+---
+
+#### Action Nedir ?
+
+```
+Context Apide, Provider ve Componentımızın içinde hangi işlemin gerçekleşeceğini ve hangi veriler gönderileceğini belirten JS objesidir. 2 türlü property barındırır. 
+
+* <b>Type : </b> Hangi işlemin gerçekleşeceği (örneğin bir ekleme(add) olayı
+* <b>Payload : </b> Hangi verinin gönderileceği
+
+```
+
+#### Dispatch Nedir ?
+
+```
+Actionları contexte göndermekle görevli bir Javascript fonksiyonudur. Provider state inin içinde bulunur.
+```
+
+#### Reducer Nedir ?
+
+```
+Gelen action ın tipine göre state i değiştirecek işlemlerden sorumlu bir JS fonksiyonudur.
+```
 
 
