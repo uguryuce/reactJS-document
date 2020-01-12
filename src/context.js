@@ -10,6 +10,12 @@ const reducer = (state, action) => {
                 users : state.users.filter(user => action.payload !== user.id)
             }
 
+        case "ADD_USER":
+            return {
+                ...state,
+                users : [...state.users,action.payload]
+            }
+
         default :
             return state
             
@@ -20,19 +26,19 @@ export class UserProvider extends Component {
     state = {
         users : [
           {
-            id : 1,
+            id : "uniqid-1",
             name : "Uğur Yüce",
             salary : "5000",
             department : "Bilişim"
           },
           {
-            id : 2,
+            id : "uniqid-2",
             name : "İlto",
             salary : "4000",
             department : "Yazılım"
           },
           {
-            id : 3,
+            id : "uniqid-3",
             name : "Selo",
             salary : "7000",
             department : "Üretim"
