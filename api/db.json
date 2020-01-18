@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "uniqid-1",
+      "name": "Uğur Yüce",
+      "salary": "5000",
+      "department": "Bilişim"
+    },
+    {
+      "id": "uniqid-3",
+      "name": "Selo",
+      "salary": "7000",
+      "department": "Üretim"
+    },
+    {
+      "name": "merabalar",
+      "salary": "3000",
+      "department": "aq",
+      "id": "6_ItX1q"
+    }
+  ]
+}

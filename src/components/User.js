@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import UserConsumer from "../context";
 import { color } from 'style-value-types';
+import axios from "axios";
 
 
 class User extends Component {
@@ -24,10 +25,13 @@ class User extends Component {
         console.log(number);
     }
 
-    onDeleteUser = (dispatch ,e) => {
+    onDeleteUser = async (dispatch ,e) => {
         const {id} = this.props;
-        //Consumer Dispatch
 
+        // Delete Request
+        await axios.delete(`http://localhost:3004/users/${id}`);
+
+        //Consumer Dispatch
         dispatch({type : "DELETE_USER", payload:id});
 
     }
