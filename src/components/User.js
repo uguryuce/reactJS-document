@@ -44,6 +44,13 @@ class User extends Component {
 
 
     }
+
+    // sayfada kaldırma/silme işlemlerinden hemen önce
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount");
+    }
+
     render() {
 
         const {name,department,salary} = this.props;
