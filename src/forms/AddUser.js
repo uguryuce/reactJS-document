@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import posed from 'react-pose';
 import UserConsumer from "../context";
-import User from './User';
+import User from '../components/User';
 import axios from "axios";
 
 
@@ -26,13 +26,22 @@ class AddUser extends Component {
         visible : false,
         name : "",
         department : "",
-        salary : ""
+        salary : "",
+        error : false
     }
 
     changeVisiblity = (e) => {
         this.setState({
             visible : !this.state.visible
         })
+    }
+
+    validateForm = () => {
+        const {name,salary,department} = this.state;
+        if (name === "" || salary === "" || department === "") {
+            return false;
+        }
+        return true;
     }
 
     changeInput = (e) => {
@@ -52,17 +61,26 @@ class AddUser extends Component {
             department : department
         }
 
+        if (!this.validateForm()){
+            this.setState({
+                error : true
+            })
+            return;
+        }
+
         const response = await axios.post(`http://localhost:3004/users`, newUser);
 
 
 
 
         dispatch({type : "ADD_USER", payload : response.data});
+
+        this.props.history.push("/");
     }
 
     render() {
 
-        const {visible, name, salary, department} = this.state;
+        const {visible, name, salary, department, error} = this.state;
 
         return <UserConsumer>
             {
@@ -83,6 +101,13 @@ class AddUser extends Component {
                                 </div>
             
                                 <div className = "card-body">
+                                    {
+                                        error ?
+                                        <div className = "alert alert-danger">
+                                            Eksik giriş yaptınız, lütfen bilgilerinizi kontrol edin
+                                        </div>
+                                        :null
+                                    }
                                     <form onSubmit = {this.addUser.bind(this, dispatch)}>
                                         <div className = "from-group">
                                             <label htmlFor = "name">Name</label>
