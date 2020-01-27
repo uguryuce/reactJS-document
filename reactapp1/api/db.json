@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "lorem",
+      "salary": "5000",
+      "department": "ipsum",
+      "id": 1
+    },
+    {
+      "name": "abc",
+      "salary": "5000",
+      "department": "def",
+      "id": 2
+    },
+    {
+      "name": "ahmet",
+      "salary": "100",
+      "department": "burak",
+      "id": 3
+    },
+    {
+      "name": "ugur",
+      "salary": "200",
+      "department": "yuce",
+      "id": 4
+    },
+    {
+      "name": "ferhat",
+      "salary": "400",
+      "department": "bozkurt222",
+      "id": 5
+    }
+  ]
+}
